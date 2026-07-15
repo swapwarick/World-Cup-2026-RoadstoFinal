@@ -6,23 +6,78 @@
     <title>World Cup 2026 | Final Whistle</title>
     <meta
       name="description"
-      content="A World Cup landing page inspired by the Osmo World Cup site, focused on the semi finalists and hype for the final."
+      content="World Cup 2026 — Roads to the Final. Semi-finalists, stats, host cities and the countdown to July 20."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,700;0,900;1,700;1,900&family=Dancing+Script:wght@700&family=Outfit:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
-    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
+    ></script>
   </head>
   <body>
+
+    <!-- ═══════════════════════════════ PRELOADER ═══════════════════════════════ -->
+    <div id="preloader" class="preloader">
+      <div class="pre-inner">
+        <div class="pre-logo">Final Whistle <em>26</em></div>
+        <div class="pre-counter-wrap">
+          <span id="pre-count" class="pre-count">0</span><span class="pre-pct">%</span>
+        </div>
+        <div class="pre-bar-track"><div class="pre-bar-fill" id="pre-bar"></div></div>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════ SCROLL BAR ══════════════════════════════ -->
+    <div id="scroll-progress" class="scroll-progress" aria-hidden="true"></div>
+
+    <!-- ═══════════════════════════════ PROGRESS BADGE ══════════════════════════ -->
+    <div id="progress-badge" class="progress-badge" aria-hidden="true">
+      <div class="badge-year">20<br />26</div>
+      <div class="badge-detail">
+        <div class="badge-section-name" id="badge-section-name">Hero</div>
+        <div class="badge-bar-wrap">
+          <div class="badge-bar-blue" id="badge-bar-blue"></div>
+          <div class="badge-bar-red" id="badge-bar-red"></div>
+        </div>
+        <div class="badge-pct-text" id="badge-pct-text">00%</div>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════ MENU BUTTON ══════════════════════════════ -->
+    <button id="menu-btn" class="menu-btn" aria-label="Open navigation menu" aria-expanded="false">
+      MENU <span class="menu-dots" aria-hidden="true">⠿</span>
+    </button>
+
+    <!-- ═══════════════════════════════ NAV OVERLAY ══════════════════════════════ -->
+    <div id="nav-overlay" class="nav-overlay" aria-hidden="true" role="navigation">
+      <div class="nav-links">
+        <a href="#hero" class="nav-link">HOME</a>
+        <a href="#semi-finalists" class="nav-link">SEMI FINALS</a>
+        <a href="#cities" class="nav-link">CITIES</a>
+        <a href="#stats" class="nav-link">STATS</a>
+        <a href="#countdown" class="nav-link">COUNTDOWN</a>
+        <a href="#ready" class="nav-link">READY?</a>
+      </div>
+      <button id="close-btn" class="close-btn" aria-label="Close navigation">
+        CLOSE <span aria-hidden="true">⠿</span>
+      </button>
+    </div>
+
+    <!-- ═══════════════════════════════ PAGE SHELL ══════════════════════════════ -->
     <div class="page-shell">
+
+      <!-- Topbar -->
       <header class="topbar">
         <div class="brand">Final Whistle 26</div>
-        <nav class="nav">
-          <a href="#hero">Hero</a>
-          <a href="#semi-finalists">Semi Finalists</a>
-          <a href="#stats">Stats</a>
-          <a href="#countdown">Countdown</a>
-        </nav>
       </header>
 
+      <!-- Ball Stage (fixed, full-viewport) -->
       <div class="ball-stage" aria-hidden="true">
         <div class="ball-shell" id="ball-shell">
           <div class="ball-aura"></div>
@@ -47,21 +102,28 @@
       </div>
 
       <main>
-        <section class="panel hero reveal ball-section" id="hero" data-ball-x="70" data-ball-y="18" data-ball-scale="1.02" data-ball-rotate="0" data-ball-mobile-x="68" data-ball-mobile-y="10" data-ball-mobile-scale="0.72" data-ball-mobile-rotate="0">
+
+        <!-- ─────────────── HERO ─────────────── -->
+        <section
+          class="panel hero reveal ball-section"
+          id="hero"
+          data-label="Hero"
+          data-ball-x="70" data-ball-y="18" data-ball-scale="1.02" data-ball-rotate="0"
+          data-ball-mobile-x="68" data-ball-mobile-y="10" data-ball-mobile-scale="0.72" data-ball-mobile-rotate="0"
+        >
           <div class="hero-inner">
             <div class="hero-header">
               <p class="eyebrow">Football World Cup 2026</p>
               <p class="hero-script">Mexico, Canada, and USA</p>
             </div>
-
             <div class="hero-copy">
               <p class="hero-kicker">Semi finalists rise.</p>
               <h1>One final night waits.</h1>
               <p class="hero-summary">
-                A cleaner World Cup landing page with the real Trionda ball moving through the story instead of covering the content.
+                The world's biggest football tournament reaches its climax.
+                Spain are through. One more side joins them in the final.
               </p>
             </div>
-
             <div class="hero-title" aria-hidden="true">
               <span>WORLD</span>
               <span>CUP</span>
@@ -70,6 +132,7 @@
           </div>
         </section>
 
+        <!-- ─────────────── TICKER ─────────────── -->
         <section class="ticker" aria-label="Qualified teams marquee">
           <div class="ticker-track">
             <span>Argentina</span>
@@ -83,13 +146,66 @@
           </div>
         </section>
 
-        <section class="panel semi-finalists reveal ball-section" id="semi-finalists" data-ball-x="78" data-ball-y="26" data-ball-scale="0.72" data-ball-rotate="55" data-ball-mobile-x="74" data-ball-mobile-y="16" data-ball-mobile-scale="0.54" data-ball-mobile-rotate="55">
+        <!-- ─────────────── BIGGEST EVER (new sticky stats) ─────────────── -->
+        <section id="biggest-ever" class="biggest-ever-section">
+          <div class="biggest-sticky-wrap">
+            <div class="biggest-left">
+              <p class="eyebrow">Introducing…</p>
+              <h2 class="biggest-title">THE<br />BIGGEST<br />EVER</h2>
+            </div>
+            <div class="biggest-right">
+              <div class="biggest-stat is-active" data-stat="0">
+                <span class="stat-num">16</span>
+                <span class="stat-label">Stadiums</span>
+              </div>
+              <div class="biggest-stat" data-stat="1">
+                <span class="stat-num">48</span>
+                <span class="stat-label">Countries</span>
+              </div>
+              <div class="biggest-stat" data-stat="2">
+                <span class="stat-num">104</span>
+                <span class="stat-label">Matches</span>
+              </div>
+              <div class="biggest-stat" data-stat="3">
+                <span class="stat-num">39</span>
+                <span class="stat-label">Days</span>
+              </div>
+              <div class="biggest-stat" data-stat="4">
+                <span class="stat-num">3</span>
+                <span class="stat-label">Host Nations</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ─────────────── NATIONS BANNER (full-bleed marquee) ─────────────── -->
+        <div class="nations-banner" aria-hidden="true">
+          <div class="nations-track">
+            <span>United States</span><span class="nb-dot">•</span>
+            <span>Mexico</span><span class="nb-dot">•</span>
+            <span>Canada</span><span class="nb-dot">•</span>
+            <span>United States</span><span class="nb-dot">•</span>
+            <span>Mexico</span><span class="nb-dot">•</span>
+            <span>Canada</span><span class="nb-dot">•</span>
+            <span>United States</span><span class="nb-dot">•</span>
+            <span>Mexico</span><span class="nb-dot">•</span>
+            <span>Canada</span><span class="nb-dot">•</span>
+          </div>
+        </div>
+
+        <!-- ─────────────── SEMI-FINALISTS ─────────────── -->
+        <section
+          class="panel semi-finalists reveal ball-section"
+          id="semi-finalists"
+          data-label="Semi Finals"
+          data-ball-x="78" data-ball-y="26" data-ball-scale="0.72" data-ball-rotate="55"
+          data-ball-mobile-x="74" data-ball-mobile-y="16" data-ball-mobile-scale="0.54" data-ball-mobile-rotate="55"
+        >
           <div class="section-heading">
             <p class="eyebrow">Semi Finalists</p>
             <h2>The last four standing</h2>
             <p>Spain have already booked one place in the final. One semifinal remains to decide the other side of the bracket.</p>
           </div>
-
           <div class="team-grid">
             <article class="team-card">
               <span class="team-rank">01</span>
@@ -114,14 +230,37 @@
           </div>
         </section>
 
-        <section class="panel result-panel reveal ball-section" id="semi-result" data-ball-x="64" data-ball-y="22" data-ball-scale="0.68" data-ball-rotate="88" data-ball-mobile-x="70" data-ball-mobile-y="16" data-ball-mobile-scale="0.52" data-ball-mobile-rotate="88">
-          <div class="section-heading">
-            <p class="eyebrow">Confirmed Result</p>
-            <h2>Spain 2-0 France</h2>
-            <p>Verified update: Spain beat France on July 14, 2026 to become the first side into the World Cup final, not the trophy winner yet.</p>
+        <!-- ─────────────── SCOREBOARD (enhanced semi-result) ─────────────── -->
+        <section
+          class="panel final-match-panel reveal ball-section"
+          id="semi-result"
+          data-label="Confirmed Result"
+          data-ball-x="64" data-ball-y="22" data-ball-scale="0.68" data-ball-rotate="88"
+          data-ball-mobile-x="70" data-ball-mobile-y="16" data-ball-mobile-scale="0.52" data-ball-mobile-rotate="88"
+        >
+          <p class="eyebrow score-eyebrow">Confirmed Result · 14 July 2026</p>
+          <div class="scoreboard">
+            <div class="score-team score-team--left">
+              <span class="score-flag">🇪🇸</span>
+              <span class="score-code">ESP</span>
+            </div>
+            <div class="score-center">
+              <span class="score-num">2</span>
+              <div class="score-badge-mid"><span>20</span><span>26</span></div>
+              <span class="score-num">0</span>
+            </div>
+            <div class="score-team score-team--right">
+              <span class="score-code">FRA</span>
+              <span class="score-flag">🇫🇷</span>
+            </div>
           </div>
-
-          <div class="route-grid">
+          <p class="scoreboard-label">SEMIFINAL RESULT</p>
+          <div class="vs-display">
+            <span class="vs-team">SPAIN</span>
+            <em class="vs-script">vs</em>
+            <span class="vs-team">FRANCE</span>
+          </div>
+          <div class="route-grid score-details">
             <article class="route-card">
               <span class="route-step">22'</span>
               <h3>Oyarzabal opener</h3>
@@ -140,13 +279,19 @@
           </div>
         </section>
 
-        <section class="panel stats-panel reveal ball-section" id="stats" data-ball-x="24" data-ball-y="30" data-ball-scale="0.64" data-ball-rotate="125" data-ball-mobile-x="24" data-ball-mobile-y="22" data-ball-mobile-scale="0.5" data-ball-mobile-rotate="125">
+        <!-- ─────────────── STATS ─────────────── -->
+        <section
+          class="panel stats-panel reveal ball-section"
+          id="stats"
+          data-label="Stats"
+          data-ball-x="24" data-ball-y="30" data-ball-scale="0.64" data-ball-rotate="125"
+          data-ball-mobile-x="24" data-ball-mobile-y="22" data-ball-mobile-scale="0.5" data-ball-mobile-rotate="125"
+        >
           <div class="section-heading">
             <p class="eyebrow">Final Hype</p>
             <h2>One night. One trophy.</h2>
             <p>The ball now tracks across the story like a campaign object rather than colliding with the typography.</p>
           </div>
-
           <div class="stats-grid">
             <article>
               <strong>01</strong>
@@ -167,13 +312,19 @@
           </div>
         </section>
 
-        <section class="panel route-panel reveal ball-section" id="route" data-ball-x="34" data-ball-y="24" data-ball-scale="0.56" data-ball-rotate="260" data-ball-mobile-x="26" data-ball-mobile-y="18" data-ball-mobile-scale="0.44" data-ball-mobile-rotate="260">
+        <!-- ─────────────── ROAD TO FINAL ─────────────── -->
+        <section
+          class="panel route-panel reveal ball-section"
+          id="route"
+          data-label="Road to Final"
+          data-ball-x="34" data-ball-y="24" data-ball-scale="0.56" data-ball-rotate="260"
+          data-ball-mobile-x="26" data-ball-mobile-y="18" data-ball-mobile-scale="0.44" data-ball-mobile-rotate="260"
+        >
           <div class="section-heading">
             <p class="eyebrow">Road To The Final</p>
             <h2>How the pressure builds</h2>
             <p>Spain are already through after beating France 2-0 on July 14, 2026. The route now narrows toward one final night.</p>
           </div>
-
           <div class="route-grid">
             <article class="route-card">
               <span class="route-step">Quarter Finals</span>
@@ -193,13 +344,52 @@
           </div>
         </section>
 
-        <section class="panel spotlight-panel reveal ball-section" id="spotlight" data-ball-x="74" data-ball-y="18" data-ball-scale="0.5" data-ball-rotate="320" data-ball-mobile-x="70" data-ball-mobile-y="14" data-ball-mobile-scale="0.42" data-ball-mobile-rotate="320">
+        <!-- ─────────────── CITIES (new section) ─────────────── -->
+        <section
+          class="panel cities-section reveal ball-section"
+          id="cities"
+          data-label="Host Cities"
+          data-ball-x="22" data-ball-y="28" data-ball-scale="0.6" data-ball-rotate="160"
+          data-ball-mobile-x="24" data-ball-mobile-y="20" data-ball-mobile-scale="0.48" data-ball-mobile-rotate="160"
+        >
+          <div class="section-heading">
+            <p class="eyebrow">Host Cities</p>
+            <h2>16 Cities.<br />One Trophy.</h2>
+            <p>The World Cup 2026 spans three nations and sixteen iconic cities across North America.</p>
+          </div>
+          <ol class="cities-list" aria-label="List of host cities">
+            <li class="city-item"><span class="city-num">01</span><span class="city-name">New York / New Jersey</span></li>
+            <li class="city-item"><span class="city-num">02</span><span class="city-name">Los Angeles</span></li>
+            <li class="city-item"><span class="city-num">03</span><span class="city-name">Mexico City</span></li>
+            <li class="city-item"><span class="city-num">04</span><span class="city-name">Dallas</span></li>
+            <li class="city-item"><span class="city-num">05</span><span class="city-name">San Francisco</span></li>
+            <li class="city-item"><span class="city-num">06</span><span class="city-name">Miami</span></li>
+            <li class="city-item"><span class="city-num">07</span><span class="city-name">Boston</span></li>
+            <li class="city-item"><span class="city-num">08</span><span class="city-name">Atlanta</span></li>
+            <li class="city-item"><span class="city-num">09</span><span class="city-name">Houston</span></li>
+            <li class="city-item"><span class="city-num">10</span><span class="city-name">Seattle</span></li>
+            <li class="city-item"><span class="city-num">11</span><span class="city-name">Philadelphia</span></li>
+            <li class="city-item"><span class="city-num">12</span><span class="city-name">Kansas City</span></li>
+            <li class="city-item"><span class="city-num">13</span><span class="city-name">Guadalajara</span></li>
+            <li class="city-item"><span class="city-num">14</span><span class="city-name">Monterrey</span></li>
+            <li class="city-item"><span class="city-num">15</span><span class="city-name">Toronto</span></li>
+            <li class="city-item"><span class="city-num">16</span><span class="city-name">Vancouver</span></li>
+          </ol>
+        </section>
+
+        <!-- ─────────────── PLAYERS ─────────────── -->
+        <section
+          class="panel spotlight-panel reveal ball-section"
+          id="spotlight"
+          data-label="Players"
+          data-ball-x="74" data-ball-y="18" data-ball-scale="0.5" data-ball-rotate="320"
+          data-ball-mobile-x="70" data-ball-mobile-y="14" data-ball-mobile-scale="0.42" data-ball-mobile-rotate="320"
+        >
           <div class="section-heading">
             <p class="eyebrow">Players To Watch</p>
             <h2>Stars who can tilt the final</h2>
             <p>Big tournaments are usually remembered through a handful of players who make the loudest moments feel inevitable.</p>
           </div>
-
           <div class="spotlight-grid">
             <article class="spotlight-card">
               <strong>Control</strong>
@@ -219,13 +409,19 @@
           </div>
         </section>
 
-        <section class="panel atmosphere-panel reveal ball-section" id="atmosphere" data-ball-x="26" data-ball-y="20" data-ball-scale="0.48" data-ball-rotate="405" data-ball-mobile-x="24" data-ball-mobile-y="16" data-ball-mobile-scale="0.4" data-ball-mobile-rotate="405">
+        <!-- ─────────────── ATMOSPHERE ─────────────── -->
+        <section
+          class="panel atmosphere-panel reveal ball-section"
+          id="atmosphere"
+          data-label="Atmosphere"
+          data-ball-x="26" data-ball-y="20" data-ball-scale="0.48" data-ball-rotate="405"
+          data-ball-mobile-x="24" data-ball-mobile-y="16" data-ball-mobile-scale="0.4" data-ball-mobile-rotate="405"
+        >
           <div class="section-heading">
             <p class="eyebrow">Match Atmosphere</p>
             <h2>Noise. Lights. Nerves.</h2>
             <p>The final is bigger than the pitch: crowd pressure, anthem energy, and one stadium waiting to explode.</p>
           </div>
-
           <div class="atmosphere-grid">
             <article>
               <strong>80,000+</strong>
@@ -242,40 +438,19 @@
           </div>
         </section>
 
-
-        <section class="panel host-panel reveal ball-section" id="hosts" data-ball-x="58" data-ball-y="18" data-ball-scale="0.52" data-ball-rotate="20" data-ball-mobile-x="66" data-ball-mobile-y="14" data-ball-mobile-scale="0.42" data-ball-mobile-rotate="20">
-          <div class="section-heading">
-            <p class="eyebrow">Host Story</p>
-            <h2>Three countries. One final stage.</h2>
-            <p>The tournament identity stretches across North America, giving the final a scale that feels continental before the match even starts.</p>
-          </div>
-
-          <div class="spotlight-grid">
-            <article class="spotlight-card">
-              <strong>Mexico</strong>
-              <h3>Tradition and noise</h3>
-              <p>Historic football culture, iconic stadium energy, and the kind of crowd emotion that lifts every moment.</p>
-            </article>
-            <article class="spotlight-card">
-              <strong>Canada</strong>
-              <h3>Fresh tournament edge</h3>
-              <p>A modern host atmosphere that gives the competition a new layer of pace, scale, and expectation.</p>
-            </article>
-            <article class="spotlight-card">
-              <strong>USA</strong>
-              <h3>Big-event theatre</h3>
-              <p>Massive venues, huge production value, and the sense that every game is being staged for the largest possible spotlight.</p>
-            </article>
-          </div>
-        </section>
-
-        <section class="panel briefing-panel reveal ball-section" id="briefing" data-ball-x="20" data-ball-y="24" data-ball-scale="0.44" data-ball-rotate="470" data-ball-mobile-x="24" data-ball-mobile-y="18" data-ball-mobile-scale="0.38" data-ball-mobile-rotate="470">
+        <!-- ─────────────── BRIEFING ─────────────── -->
+        <section
+          class="panel briefing-panel reveal ball-section"
+          id="briefing"
+          data-label="Final Briefing"
+          data-ball-x="20" data-ball-y="24" data-ball-scale="0.44" data-ball-rotate="470"
+          data-ball-mobile-x="24" data-ball-mobile-y="18" data-ball-mobile-scale="0.38" data-ball-mobile-rotate="470"
+        >
           <div class="section-heading">
             <p class="eyebrow">Final Briefing</p>
             <h2>What the final will be about</h2>
             <p>These are the themes likely to decide the trophy once the second finalist is confirmed.</p>
           </div>
-
           <div class="route-grid">
             <article class="route-card">
               <span class="route-step">Game State</span>
@@ -295,7 +470,14 @@
           </div>
         </section>
 
-        <section class="panel countdown reveal ball-section" id="countdown" data-ball-x="76" data-ball-y="24" data-ball-scale="0.58" data-ball-rotate="210" data-ball-mobile-x="72" data-ball-mobile-y="20" data-ball-mobile-scale="0.46" data-ball-mobile-rotate="210">
+        <!-- ─────────────── COUNTDOWN ─────────────── -->
+        <section
+          class="panel countdown reveal ball-section"
+          id="countdown"
+          data-label="Countdown"
+          data-ball-x="76" data-ball-y="24" data-ball-scale="0.58" data-ball-rotate="210"
+          data-ball-mobile-x="72" data-ball-mobile-y="20" data-ball-mobile-scale="0.46" data-ball-mobile-rotate="210"
+        >
           <div class="section-heading">
             <p class="eyebrow">Countdown</p>
             <h2>Kickoff is closing in</h2>
@@ -320,19 +502,29 @@
             </article>
           </div>
         </section>
+
+        <!-- ─────────────── ARE YOU READY (new CTA footer) ─────────────── -->
+        <section
+          class="ready-section ball-section"
+          id="ready"
+          data-label="Ready?"
+          data-ball-x="50" data-ball-y="20" data-ball-scale="0.78" data-ball-rotate="390"
+          data-ball-mobile-x="50" data-ball-mobile-y="14" data-ball-mobile-scale="0.62" data-ball-mobile-rotate="390"
+        >
+          <div class="ready-inner">
+            <em class="ready-date">July 20, 2026</em>
+            <h2 class="ready-heading">ARE YOU<br />READY?</h2>
+            <p class="ready-sub">The World Cup Final. One night. One champion.</p>
+          </div>
+          <footer class="site-footer">
+            <span>2026 © Final Whistle 26</span>
+            <span>Inspired by Osmo</span>
+          </footer>
+        </section>
+
       </main>
-    </div>
+    </div><!-- /page-shell -->
 
     <script src="script.js"></script>
   </body>
 </html>
-
-
-
-
-
-
-
-
-
-
