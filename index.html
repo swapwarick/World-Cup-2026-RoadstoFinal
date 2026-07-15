@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>World Cup 2026 | Final Whistle</title>
+    <meta
+      name="description"
+      content="A World Cup landing page inspired by the Osmo World Cup site, focused on the semi finalists and hype for the final."
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <div class="brand">Final Whistle 26</div>
+        <nav class="nav">
+          <a href="#hero">Hero</a>
+          <a href="#semi-finalists">Semi Finalists</a>
+          <a href="#stats">Stats</a>
+          <a href="#countdown">Countdown</a>
+        </nav>
+      </header>
+
+      <div class="ball-stage" aria-hidden="true">
+        <div class="ball-shell" id="ball-shell">
+          <div class="ball-aura"></div>
+          <model-viewer
+            id="cup-ball"
+            class="ball-model"
+            src="assets/fifa_trionda_ball_world_cup_2026.glb"
+            camera-controls
+            disable-pan
+            interaction-prompt="none"
+            shadow-intensity="0"
+            exposure="1.15"
+            environment-image="neutral"
+            camera-orbit="0deg 78deg 105%"
+            field-of-view="28deg"
+            min-camera-orbit="auto auto 105%"
+            max-camera-orbit="auto auto 105%"
+            min-field-of-view="28deg"
+            max-field-of-view="28deg"
+          ></model-viewer>
+        </div>
+      </div>
+
+      <main>
+        <section class="panel hero reveal ball-section" id="hero" data-ball-x="70" data-ball-y="18" data-ball-scale="1.02" data-ball-rotate="0" data-ball-mobile-x="68" data-ball-mobile-y="10" data-ball-mobile-scale="0.72" data-ball-mobile-rotate="0">
+          <div class="hero-inner">
+            <div class="hero-header">
+              <p class="eyebrow">Football World Cup 2026</p>
+              <p class="hero-script">Mexico, Canada, and USA</p>
+            </div>
+
+            <div class="hero-copy">
+              <p class="hero-kicker">Semi finalists rise.</p>
+              <h1>One final night waits.</h1>
+              <p class="hero-summary">
+                A cleaner World Cup landing page with the real Trionda ball moving through the story instead of covering the content.
+              </p>
+            </div>
+
+            <div class="hero-title" aria-hidden="true">
+              <span>WORLD</span>
+              <span>CUP</span>
+              <span>2026</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="ticker" aria-label="Qualified teams marquee">
+          <div class="ticker-track">
+            <span>Argentina</span>
+            <span>France</span>
+            <span>Brazil</span>
+            <span>Spain</span>
+            <span>Argentina</span>
+            <span>France</span>
+            <span>Brazil</span>
+            <span>Spain</span>
+          </div>
+        </section>
+
+        <section class="panel semi-finalists reveal ball-section" id="semi-finalists" data-ball-x="78" data-ball-y="26" data-ball-scale="0.72" data-ball-rotate="55" data-ball-mobile-x="74" data-ball-mobile-y="16" data-ball-mobile-scale="0.54" data-ball-mobile-rotate="55">
+          <div class="section-heading">
+            <p class="eyebrow">Semi Finalists</p>
+            <h2>The last four standing</h2>
+            <p>Spain have already booked one place in the final. One semifinal remains to decide the other side of the bracket.</p>
+          </div>
+
+          <div class="team-grid">
+            <article class="team-card">
+              <span class="team-rank">01</span>
+              <h3>Argentina</h3>
+              <p>Tempo control, pressure-proof finishing, and a fearless late-match pulse.</p>
+            </article>
+            <article class="team-card">
+              <span class="team-rank">02</span>
+              <h3>France</h3>
+              <p>Direct pace, power in transition, and match-winner quality across the front line.</p>
+            </article>
+            <article class="team-card">
+              <span class="team-rank">03</span>
+              <h3>Brazil</h3>
+              <p>Creative risk, improvisation, and the kind of football that changes momentum instantly.</p>
+            </article>
+            <article class="team-card">
+              <span class="team-rank">04</span>
+              <h3>Spain</h3>
+              <p>Technical structure, patient circulation, and constant pressure between the lines.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="panel result-panel reveal ball-section" id="semi-result" data-ball-x="64" data-ball-y="22" data-ball-scale="0.68" data-ball-rotate="88" data-ball-mobile-x="70" data-ball-mobile-y="16" data-ball-mobile-scale="0.52" data-ball-mobile-rotate="88">
+          <div class="section-heading">
+            <p class="eyebrow">Confirmed Result</p>
+            <h2>Spain 2-0 France</h2>
+            <p>Verified update: Spain beat France on July 14, 2026 to become the first side into the World Cup final, not the trophy winner yet.</p>
+          </div>
+
+          <div class="route-grid">
+            <article class="route-card">
+              <span class="route-step">22'</span>
+              <h3>Oyarzabal opener</h3>
+              <p>Spain struck first from the penalty spot and forced France to chase the game before halftime.</p>
+            </article>
+            <article class="route-card">
+              <span class="route-step">58'</span>
+              <h3>Porro finishes it</h3>
+              <p>A second goal gave Spain control of the semifinal and turned the last half hour into a composed closeout.</p>
+            </article>
+            <article class="route-card">
+              <span class="route-step">Aftermath</span>
+              <h3>Final spot secured</h3>
+              <p>France fall into the third-place path, while Spain wait to discover their opponent for the title match.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="panel stats-panel reveal ball-section" id="stats" data-ball-x="24" data-ball-y="30" data-ball-scale="0.64" data-ball-rotate="125" data-ball-mobile-x="24" data-ball-mobile-y="22" data-ball-mobile-scale="0.5" data-ball-mobile-rotate="125">
+          <div class="section-heading">
+            <p class="eyebrow">Final Hype</p>
+            <h2>One night. One trophy.</h2>
+            <p>The ball now tracks across the story like a campaign object rather than colliding with the typography.</p>
+          </div>
+
+          <div class="stats-grid">
+            <article>
+              <strong>01</strong>
+              <span>Finalist confirmed</span>
+            </article>
+            <article>
+              <strong>02</strong>
+              <span>Goals for Spain</span>
+            </article>
+            <article>
+              <strong>14 Jul</strong>
+              <span>Spain reached final</span>
+            </article>
+            <article>
+              <strong>02</strong>
+              <span>Matches still to play</span>
+            </article>
+          </div>
+        </section>
+
+        <section class="panel route-panel reveal ball-section" id="route" data-ball-x="34" data-ball-y="24" data-ball-scale="0.56" data-ball-rotate="260" data-ball-mobile-x="26" data-ball-mobile-y="18" data-ball-mobile-scale="0.44" data-ball-mobile-rotate="260">
+          <div class="section-heading">
+            <p class="eyebrow">Road To The Final</p>
+            <h2>How the pressure builds</h2>
+            <p>Spain are already through after beating France 2-0 on July 14, 2026. The route now narrows toward one final night.</p>
+          </div>
+
+          <div class="route-grid">
+            <article class="route-card">
+              <span class="route-step">Quarter Finals</span>
+              <h3>Momentum shifts</h3>
+              <p>Margins get smaller, recoveries matter more, and the tournament starts feeling ruthless.</p>
+            </article>
+            <article class="route-card">
+              <span class="route-step">Semi Final Result</span>
+              <h3>Spain shut France down</h3>
+              <p>Spain controlled the semifinal, won 2-0, and became the first team to secure a place in the World Cup final.</p>
+            </article>
+            <article class="route-card">
+              <span class="route-step">The Final</span>
+              <h3>History picks a side</h3>
+              <p>Ninety minutes, maybe more, and only one team walks into football immortality.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="panel spotlight-panel reveal ball-section" id="spotlight" data-ball-x="74" data-ball-y="18" data-ball-scale="0.5" data-ball-rotate="320" data-ball-mobile-x="70" data-ball-mobile-y="14" data-ball-mobile-scale="0.42" data-ball-mobile-rotate="320">
+          <div class="section-heading">
+            <p class="eyebrow">Players To Watch</p>
+            <h2>Stars who can tilt the final</h2>
+            <p>Big tournaments are usually remembered through a handful of players who make the loudest moments feel inevitable.</p>
+          </div>
+
+          <div class="spotlight-grid">
+            <article class="spotlight-card">
+              <strong>Control</strong>
+              <h3>Midfield conductors</h3>
+              <p>The players who decide tempo, territory, and whether chaos or calm wins the night.</p>
+            </article>
+            <article class="spotlight-card">
+              <strong>Impact</strong>
+              <h3>Direct runners</h3>
+              <p>The ones who can turn a flat sequence into panic with a single carry or burst in behind.</p>
+            </article>
+            <article class="spotlight-card">
+              <strong>Nerve</strong>
+              <h3>Late-game finishers</h3>
+              <p>When the match gets tight, these are the players trusted to convert the one opening that matters.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="panel atmosphere-panel reveal ball-section" id="atmosphere" data-ball-x="26" data-ball-y="20" data-ball-scale="0.48" data-ball-rotate="405" data-ball-mobile-x="24" data-ball-mobile-y="16" data-ball-mobile-scale="0.4" data-ball-mobile-rotate="405">
+          <div class="section-heading">
+            <p class="eyebrow">Match Atmosphere</p>
+            <h2>Noise. Lights. Nerves.</h2>
+            <p>The final is bigger than the pitch: crowd pressure, anthem energy, and one stadium waiting to explode.</p>
+          </div>
+
+          <div class="atmosphere-grid">
+            <article>
+              <strong>80,000+</strong>
+              <span>Voices in the bowl</span>
+            </article>
+            <article>
+              <strong>01</strong>
+              <span>Trophy on the line</span>
+            </article>
+            <article>
+              <strong>All-Time</strong>
+              <span>Legacy if you win</span>
+            </article>
+          </div>
+        </section>
+
+
+        <section class="panel host-panel reveal ball-section" id="hosts" data-ball-x="58" data-ball-y="18" data-ball-scale="0.52" data-ball-rotate="20" data-ball-mobile-x="66" data-ball-mobile-y="14" data-ball-mobile-scale="0.42" data-ball-mobile-rotate="20">
+          <div class="section-heading">
+            <p class="eyebrow">Host Story</p>
+            <h2>Three countries. One final stage.</h2>
+            <p>The tournament identity stretches across North America, giving the final a scale that feels continental before the match even starts.</p>
+          </div>
+
+          <div class="spotlight-grid">
+            <article class="spotlight-card">
+              <strong>Mexico</strong>
+              <h3>Tradition and noise</h3>
+              <p>Historic football culture, iconic stadium energy, and the kind of crowd emotion that lifts every moment.</p>
+            </article>
+            <article class="spotlight-card">
+              <strong>Canada</strong>
+              <h3>Fresh tournament edge</h3>
+              <p>A modern host atmosphere that gives the competition a new layer of pace, scale, and expectation.</p>
+            </article>
+            <article class="spotlight-card">
+              <strong>USA</strong>
+              <h3>Big-event theatre</h3>
+              <p>Massive venues, huge production value, and the sense that every game is being staged for the largest possible spotlight.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="panel briefing-panel reveal ball-section" id="briefing" data-ball-x="20" data-ball-y="24" data-ball-scale="0.44" data-ball-rotate="470" data-ball-mobile-x="24" data-ball-mobile-y="18" data-ball-mobile-scale="0.38" data-ball-mobile-rotate="470">
+          <div class="section-heading">
+            <p class="eyebrow">Final Briefing</p>
+            <h2>What the final will be about</h2>
+            <p>These are the themes likely to decide the trophy once the second finalist is confirmed.</p>
+          </div>
+
+          <div class="route-grid">
+            <article class="route-card">
+              <span class="route-step">Game State</span>
+              <h3>Who controls the tempo</h3>
+              <p>The first finalist will want to dictate the pace early and force the final into its preferred rhythm.</p>
+            </article>
+            <article class="route-card">
+              <span class="route-step">Transitions</span>
+              <h3>Who punishes space</h3>
+              <p>Finals often swing on one fast break, one recovery, or one defensive mistake that cannot be taken back.</p>
+            </article>
+            <article class="route-card">
+              <span class="route-step">Nerve</span>
+              <h3>Who owns the big moments</h3>
+              <p>Set pieces, penalty-box decisions, and late-game execution will matter more than pretty football.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="panel countdown reveal ball-section" id="countdown" data-ball-x="76" data-ball-y="24" data-ball-scale="0.58" data-ball-rotate="210" data-ball-mobile-x="72" data-ball-mobile-y="20" data-ball-mobile-scale="0.46" data-ball-mobile-rotate="210">
+          <div class="section-heading">
+            <p class="eyebrow">Countdown</p>
+            <h2>Kickoff is closing in</h2>
+            <p>Final date in India (IST): July 20, 2026. In New Jersey local time, the match is on July 19, 2026.</p>
+          </div>
+          <div class="countdown-grid" aria-live="polite">
+            <article>
+              <strong id="days">00</strong>
+              <span>Days</span>
+            </article>
+            <article>
+              <strong id="hours">00</strong>
+              <span>Hours</span>
+            </article>
+            <article>
+              <strong id="minutes">00</strong>
+              <span>Minutes</span>
+            </article>
+            <article>
+              <strong id="seconds">00</strong>
+              <span>Seconds</span>
+            </article>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
