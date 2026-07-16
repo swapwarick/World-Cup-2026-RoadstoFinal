@@ -23,6 +23,9 @@ function send(response, status, body, type) {
   response.writeHead(status, {
     'Content-Type': type,
     'Access-Control-Allow-Origin': '*',
+    'Cache-Control': 'no-store, no-cache, must-revalidate, proxy-revalidate',
+    'Pragma': 'no-cache',
+    'Expires': '0',
   });
   response.end(body);
 }

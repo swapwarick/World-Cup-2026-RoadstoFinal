@@ -59,6 +59,7 @@
       <div class="nav-links">
         <a href="#hero" class="nav-link">HOME</a>
         <a href="#semi-finalists" class="nav-link">SEMI FINALS</a>
+        <a href="#finals-confirmed" class="nav-link">THE FINAL ⚡</a>
         <a href="#cities" class="nav-link">CITIES</a>
         <a href="#stats" class="nav-link">STATS</a>
         <a href="#countdown" class="nav-link">COUNTDOWN</a>
@@ -117,11 +118,11 @@
               <p class="hero-script">Mexico, Canada, and USA</p>
             </div>
             <div class="hero-copy">
-              <p class="hero-kicker">Semi finalists rise.</p>
-              <h1>One final night waits.</h1>
+              <p class="hero-kicker">The finalists are set.</p>
+              <h1>One night decides history.</h1>
               <p class="hero-summary">
-                The world's biggest football tournament reaches its climax.
-                Spain are through. One more side joins them in the final.
+                Spain vs Argentina. The World Cup Final is confirmed.
+                Two giants of world football, one trophy, one night — July 20, 2026.
               </p>
             </div>
             <div class="hero-title" aria-hidden="true">
@@ -133,16 +134,20 @@
         </section>
 
         <!-- ─────────────── TICKER ─────────────── -->
-        <section class="ticker" aria-label="Qualified teams marquee">
+        <section class="ticker" aria-label="World Cup Final marquee">
           <div class="ticker-track">
-            <span>Argentina</span>
-            <span>France</span>
-            <span>Brazil</span>
-            <span>Spain</span>
-            <span>Argentina</span>
-            <span>France</span>
-            <span>Brazil</span>
-            <span>Spain</span>
+            <span>🇪🇸 Spain</span>
+            <span class="ticker-sep">⚽ vs ⚽</span>
+            <span>Argentina 🇦🇷</span>
+            <span class="ticker-sep">• July 20 •</span>
+            <span>🇪🇸 Spain</span>
+            <span class="ticker-sep">⚽ vs ⚽</span>
+            <span>Argentina 🇦🇷</span>
+            <span class="ticker-sep">• July 20 •</span>
+            <span>🇪🇸 Spain</span>
+            <span class="ticker-sep">⚽ vs ⚽</span>
+            <span>Argentina 🇦🇷</span>
+            <span class="ticker-sep">• July 20 •</span>
           </div>
         </section>
 
@@ -241,7 +246,6 @@
           <p class="eyebrow score-eyebrow">Confirmed Result · 14 July 2026</p>
           <div class="scoreboard">
             <div class="score-team score-team--left">
-              <span class="score-flag">🇪🇸</span>
               <span class="score-code">ESP</span>
             </div>
             <div class="score-center">
@@ -251,7 +255,6 @@
             </div>
             <div class="score-team score-team--right">
               <span class="score-code">FRA</span>
-              <span class="score-flag">🇫🇷</span>
             </div>
           </div>
           <p class="scoreboard-label">SEMIFINAL RESULT</p>
@@ -279,6 +282,97 @@
           </div>
         </section>
 
+        <!-- ─────────────── ARGENTINA vs ENGLAND SEMI-FINAL ─────────────── -->
+        <section
+          class="panel final-match-panel reveal ball-section"
+          id="arg-eng-result"
+          data-label="Semi-Final 2 Result"
+          data-ball-x="34" data-ball-y="22" data-ball-scale="0.68" data-ball-rotate="108"
+          data-ball-mobile-x="38" data-ball-mobile-y="16" data-ball-mobile-scale="0.52" data-ball-mobile-rotate="108"
+        >
+          <p class="eyebrow score-eyebrow">Confirmed Result · 15 July 2026</p>
+          <div class="scoreboard">
+            <div class="score-team score-team--left">
+              <span class="score-code">ARG</span>
+            </div>
+            <div class="score-center">
+              <span class="score-num score-num--winner">2</span>
+              <div class="score-badge-mid score-badge-mid--arg"><span>20</span><span>26</span></div>
+              <span class="score-num">1</span>
+            </div>
+            <div class="score-team score-team--right">
+              <span class="score-code">ENG</span>
+            </div>
+          </div>
+          <p class="scoreboard-label">SEMIFINAL RESULT</p>
+          <div class="vs-display">
+            <span class="vs-team">ARGENTINA</span>
+            <em class="vs-script">vs</em>
+            <span class="vs-team">ENGLAND</span>
+          </div>
+          <div class="route-grid score-details">
+            <article class="route-card">
+              <span class="route-step">34'</span>
+              <h3>Lautaro breaks through</h3>
+              <p>Argentina opened the scoring with a clinical finish — Lautaro Martínez latched onto a through ball and kept composure to slot past the keeper.</p>
+            </article>
+            <article class="route-card">
+              <span class="route-step">67'</span>
+              <h3>England pull level</h3>
+              <p>Saka fired England level with a curling effort from outside the box, threatening to send the match to extra time.</p>
+            </article>
+            <article class="route-card">
+              <span class="route-step">81'</span>
+              <h3>Álvarez seals it</h3>
+              <p>Julián Álvarez headed home a corner to restore Argentina's lead with nine minutes to go — sending the blue-and-white army into delirium.</p>
+            </article>
+          </div>
+        </section>
+
+        <!-- ─────────────── FINALS CONFIRMED (animated) ─────────────── -->
+        <section
+          class="finals-confirmed-section ball-section"
+          id="finals-confirmed"
+          data-label="The Final"
+          data-ball-x="50" data-ball-y="18" data-ball-scale="0.9" data-ball-rotate="180"
+          data-ball-mobile-x="50" data-ball-mobile-y="12" data-ball-mobile-scale="0.7" data-ball-mobile-rotate="180"
+        >
+          <!-- Fireworks / confetti particles (JS-injected canvas) -->
+          <canvas id="finals-canvas" class="finals-canvas" aria-hidden="true"></canvas>
+
+          <!-- Floating glow orbs -->
+          <div class="finals-orb finals-orb--1" aria-hidden="true"></div>
+          <div class="finals-orb finals-orb--2" aria-hidden="true"></div>
+          <div class="finals-orb finals-orb--3" aria-hidden="true"></div>
+
+          <div class="finals-inner">
+            <p class="finals-eyebrow">⚡ World Cup Final · July 20, 2026 ⚡</p>
+            <div class="finals-vs-wrap">
+              <div class="finals-team finals-team--left">
+                <span class="finals-team-name">Spain</span>
+                <span class="finals-team-label">Semifinal 1 Winner</span>
+              </div>
+              <div class="finals-vs-center">
+                <div class="finals-vs-ring" aria-hidden="true">
+                  <span class="finals-vs-text">VS</span>
+                </div>
+                <div class="finals-trophy" aria-hidden="true">🏆</div>
+              </div>
+              <div class="finals-team finals-team--right">
+                <span class="finals-team-name">Argentina</span>
+                <span class="finals-team-label">Semifinal 2 Winner</span>
+              </div>
+            </div>
+            <p class="finals-venue">MetLife Stadium · New Jersey, USA</p>
+            <div class="finals-countdown-strip">
+              <div class="finals-cd-unit"><strong id="f-days">--</strong><span>Days</span></div>
+              <div class="finals-cd-unit"><strong id="f-hours">--</strong><span>Hours</span></div>
+              <div class="finals-cd-unit"><strong id="f-mins">--</strong><span>Mins</span></div>
+              <div class="finals-cd-unit"><strong id="f-secs">--</strong><span>Secs</span></div>
+            </div>
+          </div>
+        </section>
+
         <!-- ─────────────── STATS ─────────────── -->
         <section
           class="panel stats-panel reveal ball-section"
@@ -289,25 +383,25 @@
         >
           <div class="section-heading">
             <p class="eyebrow">Final Hype</p>
-            <h2>One night. One trophy.</h2>
-            <p>The ball now tracks across the story like a campaign object rather than colliding with the typography.</p>
+            <h2>Spain vs Argentina. It's on.</h2>
+            <p>Two legendary football nations, two different paths to glory — and one night that will define a generation.</p>
           </div>
           <div class="stats-grid">
             <article>
-              <strong>01</strong>
-              <span>Finalist confirmed</span>
-            </article>
-            <article>
               <strong>02</strong>
-              <span>Goals for Spain</span>
+              <span>Finalists confirmed</span>
             </article>
             <article>
-              <strong>14 Jul</strong>
-              <span>Spain reached final</span>
+              <strong>2–0</strong>
+              <span>Spain beat France</span>
             </article>
             <article>
-              <strong>02</strong>
-              <span>Matches still to play</span>
+              <strong>2–1</strong>
+              <span>Argentina beat England</span>
+            </article>
+            <article>
+              <strong>Jul 20</strong>
+              <span>Final Kickoff</span>
             </article>
           </div>
         </section>
@@ -322,24 +416,24 @@
         >
           <div class="section-heading">
             <p class="eyebrow">Road To The Final</p>
-            <h2>How the pressure builds</h2>
-            <p>Spain are already through after beating France 2-0 on July 14, 2026. The route now narrows toward one final night.</p>
+            <h2>Both sides earned this</h2>
+            <p>Spain beat France 2–0 on July 14. Argentina beat England 2–1 on July 15. The final is set: July 20, MetLife Stadium.</p>
           </div>
           <div class="route-grid">
             <article class="route-card">
-              <span class="route-step">Quarter Finals</span>
-              <h3>Momentum shifts</h3>
-              <p>Margins get smaller, recoveries matter more, and the tournament starts feeling ruthless.</p>
-            </article>
-            <article class="route-card">
-              <span class="route-step">Semi Final Result</span>
+              <span class="route-step">Semi Final 1 · 14 Jul 🇪🇸</span>
               <h3>Spain shut France down</h3>
-              <p>Spain controlled the semifinal, won 2-0, and became the first team to secure a place in the World Cup final.</p>
+              <p>Spain controlled the game from front to back — Oyarzabal opened, Porro closed. A 2–0 win that was never in doubt after the hour mark.</p>
             </article>
             <article class="route-card">
-              <span class="route-step">The Final</span>
+              <span class="route-step">Semi Final 2 · 15 Jul 🇦🇷</span>
+              <h3>Argentina edge England</h3>
+              <p>Lautaro opened, Saka equalised, then Álvarez headed the winner in the 81st minute. A two-goal comeback absorbed and answered.</p>
+            </article>
+            <article class="route-card">
+              <span class="route-step">The Final · 20 Jul 🏆</span>
               <h3>History picks a side</h3>
-              <p>Ninety minutes, maybe more, and only one team walks into football immortality.</p>
+              <p>Spain vs Argentina. Two heavyweights, one trophy. Ninety minutes — or more — to decide who holds the cup on July 20.</p>
             </article>
           </div>
         </section>
@@ -449,8 +543,42 @@
           <div class="section-heading">
             <p class="eyebrow">Final Briefing</p>
             <h2>What the final will be about</h2>
-            <p>These are the themes likely to decide the trophy once the second finalist is confirmed.</p>
+            <p>Two captains. Two different styles. Spain's engine room vs Argentina's eternal number 10 — this final will be defined by them.</p>
           </div>
+
+          <!-- ── Player Showcase ── -->
+          <div class="player-showcase">
+            <div class="player-card player-card--spain">
+              <div class="player-card-bg" aria-hidden="true"></div>
+              <div class="player-card-inner">
+                <div class="player-info">
+                  <div class="player-meta">
+                    <span class="player-role">Captain · Spain</span>
+                    <span class="player-name">Rodri</span>
+                    <span class="player-number">#16</span>
+                  </div>
+                </div>
+                <p class="player-desc">The Ballon d'Or holder anchors Spain's midfield with iron discipline and relentless pressing — the engine behind every Spanish title run.</p>
+              </div>
+              <img src="assets/rodri.png?v=4" alt="Rodri — Spain Captain" class="player-img player-img--rodri" loading="lazy" />
+            </div>
+
+            <div class="player-card player-card--argentina">
+              <div class="player-card-bg" aria-hidden="true"></div>
+              <div class="player-card-inner">
+                <div class="player-info">
+                  <div class="player-meta">
+                    <span class="player-role">Captain · Argentina</span>
+                    <span class="player-name">Messi</span>
+                    <span class="player-number">#10</span>
+                  </div>
+                </div>
+                <p class="player-desc">The greatest of all time. Eight Ballon d'Or awards, a World Cup trophy, and still rewriting the record books at every stage of every tournament.</p>
+              </div>
+              <img src="assets/messi.png?v=4" alt="Lionel Messi — Argentina Captain" class="player-img player-img--messi" loading="lazy" />
+            </div>
+          </div>
+
           <div class="route-grid">
             <article class="route-card">
               <span class="route-step">Game State</span>
@@ -512,9 +640,10 @@
           data-ball-mobile-x="50" data-ball-mobile-y="14" data-ball-mobile-scale="0.62" data-ball-mobile-rotate="390"
         >
           <div class="ready-inner">
-            <em class="ready-date">July 20, 2026</em>
+            <em class="ready-date">July 20, 2026 · MetLife Stadium</em>
+            <div class="ready-finalists">🇪🇸 Spain <span>vs</span> Argentina 🇦🇷</div>
             <h2 class="ready-heading">ARE YOU<br />READY?</h2>
-            <p class="ready-sub">The World Cup Final. One night. One champion.</p>
+            <p class="ready-sub">The World Cup Final. One night. One champion. No more waiting.</p>
           </div>
           <footer class="site-footer">
             <span>2026 © Final Whistle 26</span>

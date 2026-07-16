@@ -338,3 +338,177 @@ function mountBallMotion() {
 }
 
 mountBallMotion();
+
+/* ─── FINALS SECTION COUNTDOWN ──────────────────────────────────────────── */
+function initFinalsCountdown() {
+  const fDays  = document.getElementById('f-days');
+  const fHours = document.getElementById('f-hours');
+  const fMins  = document.getElementById('f-mins');
+  const fSecs  = document.getElementById('f-secs');
+  if (!fDays) return;
+
+  const finalTarget = new Date('2026-07-20T00:30:00+05:30').getTime();
+
+  function tick() {
+    const delta = Math.max(finalTarget - Date.now(), 0);
+    fDays.textContent  = pad(Math.floor(delta / 864e5));
+    fHours.textContent = pad(Math.floor((delta / 36e5) % 24));
+    fMins.textContent  = pad(Math.floor((delta / 6e4) % 60));
+    fSecs.textContent  = pad(Math.floor((delta / 1e3) % 60));
+  }
+
+  tick();
+  setInterval(tick, 1000);
+}
+
+initFinalsCountdown();
+
+/* ─── FINALS FIREWORKS CANVAS ───────────────────────────────────────────── */
+function initFinalsFireworks() {
+  const canvas  = document.getElementById('finals-canvas');
+  const section = document.getElementById('finals-confirmed');
+  if (!canvas || !section) return;
+
+  const ctx = canvas.getContext('2d');
+  const colors = [
+    '#ff5a1f', '#c98f2a', '#3355dd', '#ffffff',
+    '#ffcc44', '#74acdf', '#f6b40e', '#e8e8ff',
+  ];
+
+  let W, H, particles = [], rockets = [], rafId;
+  let active = false;
+
+  function resize() {
+    W = canvas.width  = section.offsetWidth;
+    H = canvas.height = section.offsetHeight;
+  }
+
+  // ── Particle ──────────────────────────────────────────────────────────────
+  function createParticle(x, y, color) {
+    const angle  = Math.random() * Math.PI * 2;
+    const speed  = 1.5 + Math.random() * 5;
+    return {
+      x, y,
+      vx: Math.cos(angle) * speed,
+      vy: Math.sin(angle) * speed - 1,
+      color,
+      alpha: 1,
+      size:  2 + Math.random() * 3,
+      decay: 0.012 + Math.random() * 0.014,
+      gravity: 0.06,
+    };
+  }
+
+  function burst(x, y) {
+    const color = colors[Math.floor(Math.random() * colors.length)];
+    const count = 55 + Math.floor(Math.random() * 30);
+    for (let i = 0; i < count; i++) {
+      particles.push(createParticle(x, y, color));
+    }
+  }
+
+  // ── Rocket ────────────────────────────────────────────────────────────────
+  function launchRocket() {
+    const x = W * (0.15 + Math.random() * 0.7);
+    rockets.push({
+      x, y: H,
+      vy: -(8 + Math.random() * 6),
+      targetY: H * (0.1 + Math.random() * 0.45),
+      color: colors[Math.floor(Math.random() * colors.length)],
+      trail: [],
+    });
+  }
+
+  function scheduleRocket() {
+    if (!active) return;
+    launchRocket();
+    setTimeout(scheduleRocket, 400 + Math.random() * 900);
+  }
+
+  // ── Animation loop ────────────────────────────────────────────────────────
+  function draw() {
+    if (!active) return;
+    rafId = requestAnimationFrame(draw);
+    ctx.fillStyle = 'rgba(6, 10, 26, 0.2)';
+    ctx.fillRect(0, 0, W, H);
+
+    // Rockets
+    for (let i = rockets.length - 1; i >= 0; i--) {
+      const r = rockets[i];
+      r.trail.push({ x: r.x, y: r.y });
+      if (r.trail.length > 8) r.trail.shift();
+
+      r.y += r.vy;
+
+      // Draw trail
+      for (let t = 0; t < r.trail.length; t++) {
+        ctx.globalAlpha = (t / r.trail.length) * 0.5;
+        ctx.fillStyle = r.color;
+        ctx.beginPath();
+        ctx.arc(r.trail[t].x, r.trail[t].y, 2, 0, Math.PI * 2);
+        ctx.fill();
+      }
+      ctx.globalAlpha = 1;
+
+      if (r.y <= r.targetY) {
+        burst(r.x, r.y);
+        rockets.splice(i, 1);
+      }
+    }
+
+    // Particles
+    for (let i = particles.length - 1; i >= 0; i--) {
+      const p = particles[i];
+      p.x  += p.vx;
+      p.y  += p.vy;
+      p.vy += p.gravity;
+      p.vx *= 0.98;
+      p.alpha -= p.decay;
+
+      if (p.alpha <= 0) { particles.splice(i, 1); continue; }
+
+      ctx.globalAlpha = p.alpha;
+      ctx.fillStyle   = p.color;
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+      ctx.fill();
+    }
+    ctx.globalAlpha = 1;
+  }
+
+  function start() {
+    if (active) return;
+    active = true;
+    resize();
+    draw();
+    scheduleRocket();
+  }
+
+  function stop() {
+    active = false;
+    cancelAnimationFrame(rafId);
+    particles = [];
+    rockets   = [];
+    ctx.clearRect(0, 0, W, H);
+  }
+
+  // Start fireworks when the finals section is visible
+  const fireworksObs = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          start();
+        } else {
+          stop();
+        }
+      });
+    },
+    { threshold: 0.15 }
+  );
+
+  fireworksObs.observe(section);
+  window.addEventListener('resize', () => { if (active) resize(); });
+}
+
+initFinalsFireworks();
+
