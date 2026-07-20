@@ -6,7 +6,7 @@
     <title>World Cup 2026 | Final Whistle</title>
     <meta
       name="description"
-      content="World Cup 2026 — Roads to the Final. Semi-finalists, stats, host cities and the countdown to July 20."
+      content="World Cup 2026 — Spain crowned champions, with a finals gallery, semifinal storylines, and host-city highlights."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -60,6 +60,7 @@
         <a href="#hero" class="nav-link">HOME</a>
         <a href="#semi-finalists" class="nav-link">SEMI FINALS</a>
         <a href="#finals-confirmed" class="nav-link">THE FINAL ⚡</a>
+        <a href="#finals-gallery" class="nav-link">GALLERY</a>
         <a href="#cities" class="nav-link">CITIES</a>
         <a href="#stats" class="nav-link">STATS</a>
         <a href="#countdown" class="nav-link">COUNTDOWN</a>
@@ -118,12 +119,14 @@
               <p class="hero-script">Mexico, Canada, and USA</p>
             </div>
             <div class="hero-copy">
-              <p class="hero-kicker">The finalists are set.</p>
+              <p class="hero-kicker">Spain are champions.</p>
               <h1>One night decides history.</h1>
+              
               <p class="hero-summary">
-                Spain vs Argentina. The World Cup Final is confirmed.
-                Two giants of world football, one trophy, one night — July 20, 2026.
+                Spain beat Argentina to take the World Cup crown.
+                The final is settled, the trophy is lifted, and the archive below keeps the best finals alive.
               </p>
+
             </div>
             <div class="hero-title" aria-hidden="true">
               <span>WORLD</span>
@@ -134,22 +137,24 @@
         </section>
 
         <!-- ─────────────── TICKER ─────────────── -->
+        
         <section class="ticker" aria-label="World Cup Final marquee">
           <div class="ticker-track">
-            <span>🇪🇸 Spain</span>
-            <span class="ticker-sep">⚽ vs ⚽</span>
-            <span>Argentina 🇦🇷</span>
+            <span>🇪🇸 Spain champions</span>
+            <span class="ticker-sep">🏆 World Cup winners</span>
+            <span>Argentina runners-up 🇦🇷</span>
             <span class="ticker-sep">• July 20 •</span>
-            <span>🇪🇸 Spain</span>
-            <span class="ticker-sep">⚽ vs ⚽</span>
-            <span>Argentina 🇦🇷</span>
+            <span>🇪🇸 Spain champions</span>
+            <span class="ticker-sep">🏆 World Cup winners</span>
+            <span>Argentina runners-up 🇦🇷</span>
             <span class="ticker-sep">• July 20 •</span>
-            <span>🇪🇸 Spain</span>
-            <span class="ticker-sep">⚽ vs ⚽</span>
-            <span>Argentina 🇦🇷</span>
+            <span>🇪🇸 Spain champions</span>
+            <span class="ticker-sep">🏆 World Cup winners</span>
+            <span>Argentina runners-up 🇦🇷</span>
             <span class="ticker-sep">• July 20 •</span>
           </div>
         </section>
+
 
         <!-- ─────────────── BIGGEST EVER (new sticky stats) ─────────────── -->
         <section id="biggest-ever" class="biggest-ever-section">
@@ -330,6 +335,7 @@
         </section>
 
         <!-- ─────────────── FINALS CONFIRMED (animated) ─────────────── -->
+        
         <section
           class="finals-confirmed-section ball-section"
           id="finals-confirmed"
@@ -337,74 +343,185 @@
           data-ball-x="50" data-ball-y="18" data-ball-scale="0.9" data-ball-rotate="180"
           data-ball-mobile-x="50" data-ball-mobile-y="12" data-ball-mobile-scale="0.7" data-ball-mobile-rotate="180"
         >
-          <!-- Fireworks / confetti particles (JS-injected canvas) -->
           <canvas id="finals-canvas" class="finals-canvas" aria-hidden="true"></canvas>
-
-          <!-- Floating glow orbs -->
           <div class="finals-orb finals-orb--1" aria-hidden="true"></div>
           <div class="finals-orb finals-orb--2" aria-hidden="true"></div>
           <div class="finals-orb finals-orb--3" aria-hidden="true"></div>
 
           <div class="finals-inner">
-            <p class="finals-eyebrow">⚡ World Cup Final · July 20, 2026 ⚡</p>
+            <p class="finals-eyebrow">⚡ World Cup Final · Spain crowned champions ⚡</p>
             <div class="finals-vs-wrap">
-              <div class="finals-team finals-team--left">
+              <div class="finals-team finals-team--left finals-team--champions">
+                <span class="finals-flag" aria-hidden="true">🇪🇸</span>
                 <span class="finals-team-name">Spain</span>
-                <span class="finals-team-label">Semifinal 1 Winner</span>
+                <span class="finals-team-label">Champions</span>
               </div>
               <div class="finals-vs-center">
                 <div class="finals-vs-ring" aria-hidden="true">
-                  <span class="finals-vs-text">VS</span>
+                  <span class="finals-vs-text">🏆</span>
                 </div>
-                <div class="finals-trophy" aria-hidden="true">🏆</div>
+                <div class="finals-trophy" aria-hidden="true">🎉</div>
               </div>
-              <div class="finals-team finals-team--right">
+              <div class="finals-team finals-team--right finals-team--runnerup">
+                <span class="finals-flag" aria-hidden="true">🇦🇷</span>
                 <span class="finals-team-name">Argentina</span>
-                <span class="finals-team-label">Semifinal 2 Winner</span>
+                <span class="finals-team-label">Runner-up</span>
               </div>
             </div>
+            <p class="finals-champion-banner">Spain lift the trophy in New Jersey.</p>
             <p class="finals-venue">MetLife Stadium · New Jersey, USA</p>
-            <div class="finals-countdown-strip">
-              <div class="finals-cd-unit"><strong id="f-days">--</strong><span>Days</span></div>
-              <div class="finals-cd-unit"><strong id="f-hours">--</strong><span>Hours</span></div>
-              <div class="finals-cd-unit"><strong id="f-mins">--</strong><span>Mins</span></div>
-              <div class="finals-cd-unit"><strong id="f-secs">--</strong><span>Secs</span></div>
+            <div class="finals-result-strip">
+              <div class="finals-result-unit"><strong>Spain</strong><span>World champions</span></div>
+              <div class="finals-result-unit"><strong>Argentina</strong><span>Runner-up</span></div>
+              <div class="finals-result-unit"><strong>July 20</strong><span>Final day</span></div>
             </div>
           </div>
         </section>
 
+        <section
+          class="panel finals-gallery-section reveal ball-section"
+          id="finals-gallery"
+          data-label="Finals Gallery"
+          data-ball-x="22" data-ball-y="24" data-ball-scale="0.6" data-ball-rotate="210"
+          data-ball-mobile-x="24" data-ball-mobile-y="16" data-ball-mobile-scale="0.46" data-ball-mobile-rotate="210"
+        >
+          <div class="section-heading">
+            <p class="eyebrow">Finals Archive</p>
+            <h2>World Cup final moments</h2>
+            <p>Eight snapshots from finals past — celebrations, line-ups, and trophy lifts that never get old.</p>
+          </div>
+          <div class="finals-gallery-grid">
+            <figure class="finals-gallery-card finals-gallery-card--wide">
+              <img src="https://commons.wikimedia.org/wiki/Special:FilePath/2010%20World%20Cup%20Spain%20with%20cup.JPG?width=1200" alt="Spain lifting the World Cup trophy in 2010" loading="lazy" decoding="async" />
+              <figcaption class="finals-gallery-meta">
+                <span class="finals-gallery-year">2010</span>
+                <strong class="finals-gallery-title">Spain lift the cup</strong>
+                <span class="finals-gallery-caption">Johannesburg turned red and gold.</span>
+              </figcaption>
+            </figure>
+            <figure class="finals-gallery-card">
+              <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Argentina%203-3%20Francia%20-%20Copa%20Mundial%202022%20-%20Argentina%20campe%C3%B3n.jpg?width=1200" alt="Argentina celebrating after the 2022 World Cup final" loading="lazy" decoding="async" />
+              <figcaption class="finals-gallery-meta">
+                <span class="finals-gallery-year">2022</span>
+                <strong class="finals-gallery-title">Argentina champion moment</strong>
+                <span class="finals-gallery-caption">A final for the ages in Qatar.</span>
+              </figcaption>
+            </figure>
+            <figure class="finals-gallery-card">
+              <img src="https://commons.wikimedia.org/wiki/Special:FilePath/2018%20World%20Cup%20Final%20-%20France%20v%20Croatia.jpg?width=1200" alt="France versus Croatia in the 2018 World Cup final" loading="lazy" decoding="async" />
+              <figcaption class="finals-gallery-meta">
+                <span class="finals-gallery-year">2018</span>
+                <strong class="finals-gallery-title">France and Croatia</strong>
+                <span class="finals-gallery-caption">Luzhniki at full volume.</span>
+              </figcaption>
+            </figure>
+            <figure class="finals-gallery-card">
+              <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Germany%20and%20Argentina%20face%20off%20in%20the%20final%20of%20the%20World%20Cup%202014%2001.jpg?width=1200" alt="Germany and Argentina facing off in the 2014 World Cup final" loading="lazy" decoding="async" />
+              <figcaption class="finals-gallery-meta">
+                <span class="finals-gallery-year">2014</span>
+                <strong class="finals-gallery-title">Germany and Argentina</strong>
+                <span class="finals-gallery-caption">Rio delivered another classic.</span>
+              </figcaption>
+            </figure>
+            <figure class="finals-gallery-card">
+              <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Zinedine%20zidane%20wcf%202006.jpg?width=1200" alt="Zinedine Zidane at the 2006 World Cup final" loading="lazy" decoding="async" />
+              <figcaption class="finals-gallery-meta">
+                <span class="finals-gallery-year">2006</span>
+                <strong class="finals-gallery-title">Zidane in Berlin</strong>
+                <span class="finals-gallery-caption">A final remembered for drama.</span>
+              </figcaption>
+            </figure>
+            <figure class="finals-gallery-card">
+              <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Ronaldo%202002%20cropped2.jpg?width=1200" alt="Ronaldo on the day of the 2002 World Cup final" loading="lazy" decoding="async" />
+              <figcaption class="finals-gallery-meta">
+                <span class="finals-gallery-year">2002</span>
+                <strong class="finals-gallery-title">Ronaldo on final day</strong>
+                <span class="finals-gallery-caption">The finishing touch from Brazil.</span>
+              </figcaption>
+            </figure>
+            <figure class="finals-gallery-card">
+              <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Brazil%20vs%20France%201998-07-13.png?width=1200" alt="Brazil versus France in the 1998 World Cup final" loading="lazy" decoding="async" />
+              <figcaption class="finals-gallery-meta">
+                <span class="finals-gallery-year">1998</span>
+                <strong class="finals-gallery-title">France v Brazil</strong>
+                <span class="finals-gallery-caption">Paris belonged to Les Bleus.</span>
+              </figcaption>
+            </figure>
+            <figure class="finals-gallery-card">
+              <img src="https://commons.wikimedia.org/wiki/Special:FilePath/GER-BRA%202002-06-30.svg?width=1200" alt="Line-ups for the 2002 World Cup final between Germany and Brazil" loading="lazy" decoding="async" />
+              <figcaption class="finals-gallery-meta">
+                <span class="finals-gallery-year">2002</span>
+                <strong class="finals-gallery-title">Final line-ups</strong>
+                <span class="finals-gallery-caption">Yokohama, settled on paper first.</span>
+              </figcaption>
+            </figure>
+          </div>
+        </section>
+
+
         <!-- ─────────────── STATS ─────────────── -->
+        
+        
         <section
           class="panel stats-panel reveal ball-section"
           id="stats"
-          data-label="Stats"
+          data-label="Tournament Honors"
           data-ball-x="24" data-ball-y="30" data-ball-scale="0.64" data-ball-rotate="125"
           data-ball-mobile-x="24" data-ball-mobile-y="22" data-ball-mobile-scale="0.5" data-ball-mobile-rotate="125"
         >
           <div class="section-heading">
-            <p class="eyebrow">Final Hype</p>
-            <h2>Spain vs Argentina. It's on.</h2>
-            <p>Two legendary football nations, two different paths to glory — and one night that will define a generation.</p>
+            <p class="eyebrow">Tournament Honors</p>
+            <h2>Spain lifted the trophy.</h2>
+            <p>The podium is complete, the bronze final is settled, and the individual awards are in.</p>
           </div>
-          <div class="stats-grid">
+          <div class="stats-grid podium-grid">
             <article>
-              <strong>02</strong>
-              <span>Finalists confirmed</span>
+              <strong>Spain</strong>
+              <span>Champions</span>
             </article>
             <article>
-              <strong>2–0</strong>
-              <span>Spain beat France</span>
+              <strong>Argentina</strong>
+              <span>Runner-up</span>
             </article>
             <article>
-              <strong>2–1</strong>
-              <span>Argentina beat England</span>
+              <strong>England</strong>
+              <span>3rd place</span>
             </article>
             <article>
-              <strong>Jul 20</strong>
-              <span>Final Kickoff</span>
+              <strong>France</strong>
+              <span>4th place</span>
+            </article>
+          </div>
+          <div class="awards-grid">
+            <article class="award-card award-card--golden-boot">
+              <span class="award-label">Golden Boot</span>
+              <h3>Kylian Mbappé</h3>
+              <p>Finished as the tournament's top scorer and delivered France's biggest attacking moments.</p>
+            </article>
+            <article class="award-card award-card--golden-glove">
+              <span class="award-label">Golden Glove</span>
+              <h3>Unai Simón</h3>
+              <p>Spain conceded just one goal on the way to the title, and their keeper set the standard.</p>
+            </article>
+            <article class="award-card award-card--golden-ball">
+              <span class="award-label">Golden Ball</span>
+              <h3>Rodri</h3>
+              <p>The metronome of Spain's run, controlling tempo and territory from midfield.</p>
+            </article>
+            <article class="award-card award-card--young-player">
+              <span class="award-label">Young Player</span>
+              <h3>Lamine Yamal</h3>
+              <p>Spain's teenage spark, blending courage, quality, and end product across the knockout rounds.</p>
+            </article>
+            <article class="award-card award-card--fair-play">
+              <span class="award-label">Fair Play</span>
+              <h3>Spain</h3>
+              <p>Composed, disciplined, and efficient from start to finish.</p>
             </article>
           </div>
         </section>
+
+
 
         <!-- ─────────────── ROAD TO FINAL ─────────────── -->
         <section
@@ -416,8 +533,8 @@
         >
           <div class="section-heading">
             <p class="eyebrow">Road To The Final</p>
-            <h2>Both sides earned this</h2>
-            <p>Spain beat France 2–0 on July 14. Argentina beat England 2–1 on July 15. The final is set: July 20, MetLife Stadium.</p>
+            <h2>Both sides earned their place</h2>
+            <p>Spain beat France 2–0 on July 14. Argentina beat England 2–1 on July 15. Spain later lifted the trophy at MetLife Stadium on July 20.</p>
           </div>
           <div class="route-grid">
             <article class="route-card">
@@ -432,8 +549,8 @@
             </article>
             <article class="route-card">
               <span class="route-step">The Final · 20 Jul 🏆</span>
-              <h3>History picks a side</h3>
-              <p>Spain vs Argentina. Two heavyweights, one trophy. Ninety minutes — or more — to decide who holds the cup on July 20.</p>
+              <h3>History picked Spain</h3>
+              <p>Spain and Argentina both arrived with form, but Spain ended the night with the World Cup and the clearest place in the story.</p>
             </article>
           </div>
         </section>
@@ -542,8 +659,8 @@
         >
           <div class="section-heading">
             <p class="eyebrow">Final Briefing</p>
-            <h2>What the final will be about</h2>
-            <p>Two captains. Two different styles. Spain's engine room vs Argentina's eternal number 10 — this final will be defined by them.</p>
+            <h2>What the final was about</h2>
+            <p>Two captains. Two different styles. Spain engine room and Argentina eternal number 10 shaped the night, but Spain came out on top.</p>
           </div>
 
           <!-- ── Player Showcase ── -->
@@ -599,51 +716,53 @@
         </section>
 
         <!-- ─────────────── COUNTDOWN ─────────────── -->
+        
         <section
           class="panel countdown reveal ball-section"
           id="countdown"
-          data-label="Countdown"
+          data-label="Result Recap"
           data-ball-x="76" data-ball-y="24" data-ball-scale="0.58" data-ball-rotate="210"
           data-ball-mobile-x="72" data-ball-mobile-y="20" data-ball-mobile-scale="0.46" data-ball-mobile-rotate="210"
         >
           <div class="section-heading">
-            <p class="eyebrow">Countdown</p>
-            <h2>Kickoff is closing in</h2>
-            <p>Final date in India (IST): July 20, 2026. In New Jersey local time, the match is on July 19, 2026.</p>
+            <p class="eyebrow">Result Recap</p>
+            <h2>Spain made it count</h2>
+            <p>The final is in the books: Spain lifted the trophy, Argentina finished as runners-up, and the night belongs to the champions.</p>
           </div>
-          <div class="countdown-grid" aria-live="polite">
+          <div class="countdown-grid countdown-grid--results" aria-live="polite">
             <article>
-              <strong id="days">00</strong>
-              <span>Days</span>
+              <strong>Spain</strong>
+              <span>World champions</span>
             </article>
             <article>
-              <strong id="hours">00</strong>
-              <span>Hours</span>
+              <strong>Argentina</strong>
+              <span>Runner-up</span>
             </article>
             <article>
-              <strong id="minutes">00</strong>
-              <span>Minutes</span>
+              <strong>July 20</strong>
+              <span>Final day</span>
             </article>
             <article>
-              <strong id="seconds">00</strong>
-              <span>Seconds</span>
+              <strong>2026</strong>
+              <span>Trophy year</span>
             </article>
           </div>
         </section>
 
-        <!-- ─────────────── ARE YOU READY (new CTA footer) ─────────────── -->
+
+        <!-- â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ WINNER STATEMENT FOOTER â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ -->
         <section
           class="ready-section ball-section"
           id="ready"
-          data-label="Ready?"
+          data-label="Winner Statement"
           data-ball-x="50" data-ball-y="20" data-ball-scale="0.78" data-ball-rotate="390"
           data-ball-mobile-x="50" data-ball-mobile-y="14" data-ball-mobile-scale="0.62" data-ball-mobile-rotate="390"
         >
           <div class="ready-inner">
             <em class="ready-date">July 20, 2026 · MetLife Stadium</em>
-            <div class="ready-finalists">🇪🇸 Spain <span>vs</span> Argentina 🇦🇷</div>
-            <h2 class="ready-heading">ARE YOU<br />READY?</h2>
-            <p class="ready-sub">The World Cup Final. One night. One champion. No more waiting.</p>
+            <div class="ready-finalists">🇪🇸 Spain champions <span>over</span> Argentina 🇦🇷</div>
+            <h2 class="ready-heading">WINNERS<br />SPEAK</h2>
+            <p class="ready-sub">Spain finished the job, claimed the trophy, and wrote the final line of the tournament.</p>
           </div>
           <footer class="site-footer">
             <span>2026 © Final Whistle 26</span>
